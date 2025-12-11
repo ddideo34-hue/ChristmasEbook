@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy Christmas Cookbook - Free eBook</title>
+<style>
+    #customizeBtn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b); /* Festive red gradient */
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#customizeBtn:hover {
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+#customizeBtn:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to bottom, #fff8f0, #ffe6e6);
+        color: #333;
+    }
+
+    header {
+        background-color: #c0392b;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    .mockup {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .mockup img {
+        max-width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .description {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    .cta-section {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .cta-section button {
+        background-color: #27ae60;
+        color: #fff;
+        font-size: 1.2em;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s;
+    }
+
+    .cta-section button:hover {
+        background-color: #2ecc71;
+    }
+
+    .customize-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #f9f5f2;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .customize-section h2 {
+        text-align: center;
+        color: #c0392b;
+    }
+
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .option {
+        background-color: #fff;
+        border: 2px solid #c0392b;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        flex: 1 1 200px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .option.selected {
+        background-color: #c0392b;
+        color: #fff;
+    }
+
+    .loading-bar {
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .loading-bar-inner {
+        height: 20px;
+        width: 0%;
+        background-color: #27ae60;
+        transition: 2s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 2em;
+        }
+        .mockup img {
+            max-width: 200px;
+        }
+        .option {
+            flex: 1 1 45%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Cozy Christmas Cookbook</h1>
+    <p>Get your FREE customizable Christmas eBook today!</p>
+</header>
+
+<div class="mockup">
+    <img src="Book_Cover_Mockup (1).jpg" alt="Cozy Christmas Cookbook eBook">
+</div>
+
+<div class="description">
+    <p>Celebrate the season with the <strong>Cozy Christmas Cookbook</strong>—packed with festive flavors, comforting classics, and quick, delicious holiday treats to make every moment magical.</p>
+    <h2>Here’s how to get your free, fully customizable ebook</h2>
+    <p>simply choose your preferred options below, click “Customize,” and then select “Customize My Book.” Your personalized version will be created instantly. To access your ebook, just complete a quick, free survey—then get ready to enjoy a truly delicious Christmas with family and friends!</p>
+</div>
+
+<div class="cta-section">
+    <p>Complete a quick survey below to receive your FREE eBook.</p>
+</div>
+
+<div class="customize-section">
+    <h2>Customize Your Cookbook</h2>
+    <p>Choose the types of recipes you want included and make this book uniquely yours!</p>
+    
+    <div class="options">
+        <div class="option" data-value="Quick & Easy">Quick & Easy Recipes</div>
+        <div class="option" data-value="Classic Comfort Foods">Classic Comfort Foods</div>
+        <div class="option" data-value="Kid-Friendly">Kid-Friendly Recipes</div>
+        <div class="option" data-value="Healthy Options">Healthy & Diet-Friendly</div>
+        <div class="option" data-value="Giftable Treats">Giftable Treats</div>
+        <div class="option" data-value="Desserts">Desserts & Sweet Treats</div>
+        <div class="option" data-value="Festive Drinks">Festive Drinks</div>
+        <div class="option" data-value="Breakfast Ideas">Breakfast Recipes</div>
+        <div class="option" data-value="Vegetarian">Vegetarian Dishes</div>
+        <div class="option" data-value="Seafood">Seafood Delights</div>
+        <div class="option" data-value="Poultry">Poultry Recipes</div>
+        <div class="option" data-value="Meat">Meat-Based Dishes</div>
+        <div class="option" data-value="Snacks">Snacks & Appetizers</div>
+        <div class="option" data-value="Holiday Sides">Holiday Sides</div>
+        <div class="option" data-value="Party Platters">Party Platters</div>
+    </div>
+
+    <button id="customizeBtn">Customize My Book</button>
+    
+    <div class="loading-bar" id="loadingBar">
+        <div class="loading-bar-inner" id="loadingBarInner"></div>
+    </div>
+
+    <div class="cta-section" id="finalCta" style="display:none;">
+        <a href="https://singingfiles.com/show.php?l=0&u=2041729&id=73209"><button id="downloadCustom">Get Your Customized Book</button></a>
+
+        <a href="https://singingfiles.com/show.php?l=0&u=2041729&id=73209"><button id="downloadRegular">Get Uncustomized Version</button></a>
+    </div>
+</div>
+
+<script>
+    const options = document.querySelectorAll('.option');
+    const customizeBtn = document.getElementById('customizeBtn');
+    const loadingBar = document.getElementById('loadingBar');
+    const loadingBarInner = document.getElementById('loadingBarInner');
+    const finalCta = document.getElementById('finalCta');
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            option.classList.toggle('selected');
+        });
+    });
+
+    customizeBtn.addEventListener('click', () => {
+        const selected = document.querySelectorAll('.option.selected');
+        if(selected.length === 0){
+            alert("Please select at least one recipe type to customize your book!");
+            return;
+        }
+        loadingBar.style.display = 'block';
+        loadingBarInner.style.width = '0%';
+        setTimeout(() => {
+            loadingBarInner.style.width = '100%';
+        }, 100);
+        setTimeout(() => {
+            finalCta.style.display = 'block';
+        }, 2100); // match transition duration
+    });
+</script>
+
+</body>
+</html>
